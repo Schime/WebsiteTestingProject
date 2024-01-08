@@ -20,29 +20,7 @@ jobs:
           java-version: '21.0.1'
 
       - name: Build and Test
-        run: mvn -B package
-
-      - name: Create Docs Directory
-        run: mkdir -p docs/
-
-      - name: Copy Surefire Reports
-        run: cp -R target/surefire-reports/* docs/
-
-      - name: Publish Artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: test-reports
-          path: target/surefire-reports/
-      
-      - name: Commit and Push Reports
-        run: |
-          git config --global user.name "${{ github.actor }}"
-          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-          git add docs
-          git commit -m "Update Test Reports [from workflow]"
-          git push origin main
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: mvn test
 
       - name: Cleaning Up
         run: mvn clean
