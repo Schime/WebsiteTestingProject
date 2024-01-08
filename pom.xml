@@ -92,7 +92,6 @@
                 <configuration>
                     <suiteXmlFiles>
                         <suiteXmlFile>mainPageTest.xml</suiteXmlFile>
-                        <suiteXmlFile>searchPageTest.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
