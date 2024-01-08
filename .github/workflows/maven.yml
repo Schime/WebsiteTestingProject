@@ -1,4 +1,4 @@
-name: Initial testing
+name: CI Implementation
 
 on:
   push:
