@@ -15,11 +15,18 @@ public class SearchedPage {
     public void clickAddToBasketButton(){
         WebDriverWait wait = new WebDriverWait ( driver, 5 );
         try{
-            scrollToElement(driver,basketButtonLocator);
+            Thread.sleep ( 4000 );
             WebElement addToBasketButton = wait.until(ExpectedConditions.elementToBeClickable ( addToBasketButtonLocator ));
+            WebElement acceptCookiesButton = driver.findElement(By.id("onetrust-accept-btn-handler"));
+            if (acceptCookiesButton.isDisplayed() && acceptCookiesButton.isEnabled()) {
+                acceptCookiesButton.click();
+            }
+            scrollToElement(driver,basketButtonLocator);
             addToBasketButton.click ();
         }catch ( TimeoutException e ){
             e.printStackTrace ();
+        } catch ( InterruptedException e ) {
+            throw new RuntimeException ( e );
         }
     }
     public void goToBasket(){
