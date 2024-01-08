@@ -23,38 +23,5 @@ This repository contains a Java project for automated testing of the "Links" web
 
 1. Clone the repository to your local machine.
    ```bash
-   git clone https://github.com/your-username/website-testing.git
+   git clone https://github.com/Schime/TestingProject.git
 
-    Open the project in IntelliJ IDEA.
-
-    Ensure Maven dependencies are resolved.
-
-    Run the test suite using TestNG.
-
-Project Structure
-
-The project is structured according to the Page Object Model (POM) to enhance code maintainability and readability.
-
-css
-
-src
-├── main
-│   └── java
-│       └── com
-│           └── yourcompany
-│               └── pages
-│                   └── HomePage.java
-│                   └── LoginPage.java
-│                   └── ...
-│               └── tests
-│                   └── WebsiteTests.java
-├── test
-│   └── java
-│       └── com
-│           └── yourcompany
-│               └── utils
-│                   └── TestBase.java
-
-Running Tests
-
-Tests can be executed using the TestNG suite or by running individual test classes.
