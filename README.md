@@ -95,7 +95,7 @@ To enable CI for your project, a workflow configuration file named `.github/work
 #### Contents of `maven.yml`
 
 ```yaml
-name: Java CI with Maven
+name: CI Implementation
 
 on:
   push:
@@ -103,24 +103,23 @@ on:
       - main
 
 jobs:
-  build:
-
+  test:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
-    - name: Set up JDK 21
-      uses: actions/setup-java@v3
-      with:
-        distribution: 'adopt'
-        java-version: '21'
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'adopt'
+          java-version: '21.0.1'
 
-    - name: Build with Maven
-      run: mvn -B clean install
+      - name: Build and Test
+        run: mvn test
 
-    - name: Run Tests
-      run: mvn test
+      - name: Cleaning Up
+        run: mvn clean
 
 
