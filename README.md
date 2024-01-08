@@ -51,8 +51,14 @@ There are two ways to run the tests in this project:
 2. Navigate to **Run -> Edit Configurations**.
 3. Click on the Plus icon located far left.
 4. Locate **TestNG** and click on it.
-5. Apply the configuration settings.
+5. Apply the configuration settings. (Select one of the three testing environments)
 6. Run the test.
+
+## Cross Browser Testing
+
+Projects ```.xml``` files are already set up for cross browser testing. When test are run, configuration first selects the Chrome browser for testing all the things specified in the configuration. After it is done testing on the Chrome browser, it sets up Firefox browser to be next.
+
+For more cross browser testing, you can add different browsers into the ```.xml``` test files, but you will also have to add additional browser configuration inside ```Test``` classes.
 
 ## Reporting
 
