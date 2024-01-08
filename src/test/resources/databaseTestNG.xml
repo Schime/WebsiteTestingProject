@@ -1,0 +1,37 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MyTestSuite">
+
+    <!-- Test Case 1: Login Page Testing with Chrome -->
+    <test name="DatabaseTestingWithChrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="DatabaseTest">
+                <methods>
+
+                    <!-- Replace username and password with INCORRECT data in database -->
+                    <parameter name="username" value="testUsername"/>
+                    <parameter name="password" value="password"/>
+                    <include name="loginRegistrationDatabaseSequenceTest"/>
+
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Test Case 2: Login Page Testing with Firefox -->
+    <test name="DatabaseTestingWithFirefox">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="DatabaseTest">
+                <methods>
+
+                    <!-- Replace username and password with INCORRECT data in database -->
+                    <parameter name="username" value="testUsername"/>
+                    <parameter name="password" value="password"/>
+                    <include name="loginRegistrationDatabaseSequenceTest"/>
+
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

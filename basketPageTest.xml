@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MyTestSuite">
+
+    <test name="BasketPageChrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="BasketPageTest"/>
+        </classes>
+    </test>
+
+    <test name="BasketPageFirefox">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="BasketPageTest"/>
+        </classes>
+    </test>
+</suite>

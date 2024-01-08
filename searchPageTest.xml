@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MyTestSuite">
+
+    <test name="SearchedPageChrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="SearchPageTest"/>
+        </classes>
+    </test>
+
+    <test name="SearchedPageFirefox">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="SearchPageTest"/>
+        </classes>
+    </test>
+</suite>

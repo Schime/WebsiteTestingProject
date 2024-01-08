@@ -1,0 +1,51 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MyTestSuite">
+
+    <!-- Test Case 1: Login Page Testing with Chrome -->
+    <test name="LoginPageTestingWithChrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="LoginPageTest">
+                <methods>
+
+                    <!-- Replace username and password with CORRECT data in database -->
+                    <include name="loginSuccessTest">
+                        <parameter name="username" value="testUsername"/>
+                        <parameter name="password" value="password"/>
+                    </include>
+
+                    <!-- Replace username and password with INCORRECT data in database -->
+                    <include name="loginFailTest">
+                        <parameter name="username" value="testUsername"/>
+                        <parameter name="password" value="password"/>
+                    </include>
+
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Test Case 2: Login Page Testing with Firefox -->
+    <test name="LoginPageTestingWithFirefox">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="LoginPageTest">
+                <methods>
+
+                    <!-- Replace username and password with CORRECT data in database -->
+                    <include name="loginSuccessTest">
+                        <parameter name="username" value="testUsername"/>
+                        <parameter name="password" value="password"/>
+                    </include>
+
+                    <!-- Replace username and password with INCORRECT data in database -->
+                    <include name="loginFailTest">
+                        <parameter name="username" value="testUsername"/>
+                        <parameter name="password" value="password"/>
+                    </include>
+
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

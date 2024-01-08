@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MyTestSuite">
+
+    <test name="MainPageChrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="MainPageTest"/>
+        </classes>
+    </test>
+
+    <test name="MainPageFirefox">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="MainPageTest"/>
+        </classes>
+    </test>
+</suite>

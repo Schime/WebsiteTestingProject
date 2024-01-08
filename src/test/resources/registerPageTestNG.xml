@@ -1,0 +1,54 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MyTestSuite">
+
+    <!-- Test Case 1: Register Page Testing with Chrome -->
+
+    <test name="RegisterPageTestingWithChrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="RegisterPageTest">
+                <methods>
+
+                    <!-- Replace username with value that is not in the database -->
+
+                    <include name="registrationSuccessTest">
+                        <parameter name="username" value="testUsername"/>
+                    </include>
+
+                    <!-- Replace username with value that is not in the database -->
+
+                    <include name="registrationWithRequiredInput">
+                        <parameter name="username" value="testUsername"/>
+                    </include>
+                    <include name="registrationWithNonRequiredInput"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Test Case 2: Register Page Testing with Firefox -->
+
+    <test name="RegisterPageTestingWithFirefox">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="RegisterPageTest">
+                <methods>
+
+                    <!-- Replace username with value that is not in the database -->
+
+                    <include name="registrationSuccessTest">
+                        <parameter name="username" value="testUsername"/>
+                    </include>
+
+                    <!-- Replace username with value that is not in the database -->
+
+
+                    <include name="registrationWithRequiredInput">
+                        <parameter name="username" value="testUsername"/>
+                    </include>
+                    <include name="registrationWithNonRequiredInput"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
